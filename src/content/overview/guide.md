@@ -1,7 +1,7 @@
 ---
 title: 'How to Build a Guide'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 15 2022'
+pubDate: 'Dec 30 2025'
 heroImage: '../../assets/blog-placeholder-4.jpg'
 ---
 One of the most important parts of the process is creating a guide.
@@ -44,27 +44,35 @@ Some common ones are: Google Slides, Figma, Canva and Powerpoint
 
 
 ### Creating the slides
-It's easiest if you start by laying out the general order of the slides that you think are important,
+It's easiest if you start by laying out the general order of the slides that you think are important 
 and setting up a framework through this.
 The slides can be rearranged later as needed, this is currently just a template.\
-This doesn’t have to be an extensive list, but should encompass the main idea
+This doesn’t have to be an extensive list, but should encompass the main idea.
+Then go through and create the actual guide and content portion,
+Feel free to take breaks every so often during this process by starting work on the theming, it can help keep motivation up!
+
+#### Recommended Presentation Parts
+- Title
+- What will we create today?
+- Recap: Pulling on prior knowledge
+- Learning: How does this work?
+- Creating: The workshop portion, with a detailed steps
+- Independent Part: Give resources to allow participants to make their submission unique with a clear goal
+- Shipping: How to get the project on GitHub and fill out the submission form
+- What's Next? Coming to the next workshop? Joining Slack? 
+
+#### Themes and visuals!
+Make the whole slideshow flow together while looking nice!\
+Keep the slides consistent with colors, fonts, sizes etc.\
+It can be helpful to gather all the visuals that may be needed on a single slide at once.
+This helped me not have to keep hunting around the internet looking for stuff to do.
 
 
-# **(WIP BELOW)**
+Finally, go over the slides and proof-read everything and act like you’re a leader presenting; this can help catch so many errors.
 
-Add bullet points and images of the code itself if relevant to the slides (the content)
+#### Further Comments
+This isn’t an extensive list but is adapted from a document made back in the Spring to help out someone creating slides for a YSWS.
+The quick framework above is how we would go about making workshop slides, 
+and is the process I went through when creating the Swirl slides and a few other workshop slides myself.
 
-Make the goal of the workshop clear and concise
-
-Let the participants know how to submit and what comes next (probably joining slack)
-
-Themes and visuals!
-Make the whole slideshow flow together while looking nice!
-Keep the slides consistent with colors, fonts, sizes etc
-(optional, but i found this very helpful) Gather all of the visuals you may need on a single slide at one time. This helped me not have to keep hunting around the internet looking for stuff to do.
-
-
-Go over the slides and proof-read everything and act like you’re a leader presenting (I caught so many little errors when doing this)
-
-Again, this isn’t an extensive list but just a quick framework on how I would go about making workshop slides
-This isn’t a perfect or extensive list in anyway but this is just how I went about creating the Swirl slides myself
+This isn't extensive and applicable to everybody, please feel free to unleash your creativity when working on your guide, happy hacking!

@@ -1,7 +1,7 @@
 ---
 title: 'Application forms'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: '10-26-2025'
+pubDate: 'Jan 2 2025'
 heroImage: '../../assets/blog-placeholder-2.jpg'
 ---
 Now that you know a little more about how to create a workshop, it's time to make yours a reality!
