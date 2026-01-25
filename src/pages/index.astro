@@ -11,9 +11,10 @@ import HomeContent from '../content/home.md';
 <!doctype html>
 <html lang="en">
 	<head>
+		<title>{SITE_TITLE}</title>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
+	<body class="pattern-dots-sm">
 		<Header />
 		<main>
 			<h1 style="display:inline-block; white-space:nowrap; margin-left:-12px; margin-right:-12px;">Build Your Own Workshop!</h1>
@@ -23,21 +24,12 @@ import HomeContent from '../content/home.md';
 			<h3>Ever wanted to...</h3>
 				<b style="text-align:center;">Create your own ysws? Get more flexibility? Help others get creative?</b>
 			<h5 style="text-align:center;"> This is your chance!</h5>
-			<p>Once approved, lead the program at your own club! Hack Club will fund it at a maximum of $5USD per hour spent.
-			If it goes successfully and you're intrested, we can help you scale it as a real Hack Club program for other clubs around the world to enjoy as well!
-			</p>
-
-				<p>One of the most important parts of this process is not being afraid to ask questions. All of us "mentors" were new to this as well in the recent past,
-					and we [add] so don't hesitate to reach out if you need any help along the way! </p>
-
-			<div style="width:100%;height:500px;" data-fillout-id="rq9pAg4daCus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize data-fillout-domain="forms.hackclub.com"></div><script src="https://server.fillout.com/embed/v1/"></script>
-
-			<p>Whether you're a club leader looking to get your members shipping more projects,
-				interested in running a custom workshop funded by Hack Club,
-				or are looking to benefit highschoolers globally, this is your chance!</p>
-
-
+			<HomeContent />
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+  /* Page-specific tweaks can go here if needed */
+</style>

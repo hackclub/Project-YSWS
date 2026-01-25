@@ -15,6 +15,8 @@
 	--box-shadow:
 		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px
 		rgba(var(--gray), 33%);
+    --bg:#fdc5b2;
+    --bg-dark: #d39c82;
 }
 @font-face {
 	font-family: "Atkinson";
@@ -35,7 +37,7 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: #fdc5b2;
+	background: var(--bg);
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
@@ -152,4 +154,10 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+.pattern-dots-sm {
+  background-image: radial-gradient(var(--bg-dark) 1px, transparent 1px);
+  background-size: 12px 12px;
+  background-position: 0 0;
 }
