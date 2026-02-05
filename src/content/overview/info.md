@@ -43,6 +43,7 @@ Once complete, your guide will be reviewed by a mentor, and you will receive fee
 Upon approval, you will be able to lead the workshop at your club with funding from Hack Club!
 
 ### Questions?
-Feel free to reach out to me at [dhyan@hackclub.com](mailto:dhyan@hackclub.com)
+Feel free to reach out to us on the [#project-ysws](https://hackclub.enterprise.slack.com/archives/C02PA5G01ND) channel on Slack,
+or email me at [dhyan@hackclub.com](mailto:dhyan@hackclub.com)
 
 
