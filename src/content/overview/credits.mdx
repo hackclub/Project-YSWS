@@ -1,0 +1,16 @@
+---
+title: 'Credits'
+description: 'The team behind Project YSWS'
+pubDate: 'Jan 5 2025'
+---
+import TeamGrid from '../../components/TeamGrid.astro';
+import teamData from '../../data/team.ts';
+
+Thank you to everyone who helped make this possible!
+Check back here at the end of the event for a few statistics that I may find interesting
+
+<TeamGrid members={teamData.leads} isLead={true} />
+
+### Mentors
+
+<TeamGrid members={teamData.mentors} />

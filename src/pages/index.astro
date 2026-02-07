@@ -3,7 +3,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
 
 import HomeContent from '../content/home.md';
 ---
@@ -14,22 +13,131 @@ import HomeContent from '../content/home.md';
 		<title>{SITE_TITLE}</title>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="pattern-dots-sm">
+	<body class="pattern-dots">
 		<Header />
-		<main>
-			<h1 style="display:inline-block; white-space:nowrap; margin-left:-12px; margin-right:-12px;">Build Your Own Workshop!</h1>
-			<em>Get your members and other clubs around the world shipping more projects!</em>
-			<img src="/workshop-image.png" alt="Image of a workshop" />
+		<main class="page-container">
+			<section class="hero-section">
+				<h1 class="hero-title">Build Your Own Workshop!</h1>
+				<p class="hero-subtitle">Get your members and other clubs around the world shipping more projects!</p>
+				
+				<div class="hero-image-container">
+					<img src="/workshop-image.png" alt="Image of a workshop" />
+				</div>
+			</section>
 
-			<h3>Ever wanted to...</h3>
-				<b style="text-align:center;">Create your own ysws? Get more flexibility? Help others get creative?</b>
-			<h5 style="text-align:center;"> This is your chance!</h5>
-			<HomeContent />
+			<section class="content-section">
+				<div class="card intro-card">
+					<h2 class="text-center mb-4">Ever wanted to...</h2>
+					<p class="text-center lead">Create your own YSWS? Get more flexibility? Help others get creative?</p>
+					<div class="highlight-box">
+						<h3>This is your chance!</h3>
+					</div>
+					<div class="prose">
+						<HomeContent />
+					</div>
+				</div>
+			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
 
 <style>
-  /* Page-specific tweaks can go here if needed */
+	.hero-section {
+		text-align: center;
+		padding: 4rem 0 2rem;
+	}
+
+	.hero-title {
+		font-size: clamp(2.5rem, 6vw, 4rem);
+		line-height: 1.1;
+		margin-bottom: 1rem;
+		background: linear-gradient(120deg, var(--red-dark), var(--purple));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		display: inline-block;
+	}
+
+	.hero-subtitle {
+		font-size: 1.25rem;
+		color: var(--text-muted);
+		max-width: 600px;
+		margin: 0 auto 3rem;
+	}
+
+	.hero-image-container {
+		max-width: 900px;
+		margin: 0 auto;
+		transform: rotate(-1deg);
+		transition: transform 0.3s ease;
+		position: relative;
+	}
+
+	.hero-image-container::before {
+		content: '';
+		position: absolute;
+		top: 10%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80%;
+		height: 80%;
+		background: linear-gradient(120deg, var(--red), var(--orange), var(--yellow));
+		filter: blur(60px);
+		z-index: -1;
+		opacity: 0.5;
+		border-radius: 50%;
+	}
+
+	.hero-image-container:hover {
+		transform: rotate(0deg) scale(1.02);
+	}
+
+	.hero-image-container img {
+		box-shadow: var(--shadow-hover);
+		border: 4px solid rgba(255, 255, 255, 0.5);
+	}
+
+	.content-section {
+		max-width: 800px;
+		margin: 3rem auto 5rem;
+	}
+
+	.intro-card {
+		padding: 3rem;
+		background: rgba(255, 255, 255, 0.25);
+		backdrop-filter: blur(12px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	.lead {
+		font-size: 1.2rem;
+		font-weight: 500;
+		color: var(--dark);
+		margin-bottom: 2rem;
+	}
+
+	.highlight-box {
+		background: var(--bg);
+		border: 2px dashed var(--accent);
+		border-radius: var(--radius);
+		padding: 1.5rem;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.highlight-box h3 {
+		margin: 0;
+		color: var(--accent);
+	}
+
+	.prose {
+		line-height: 1.8;
+	}
+
+	@media (max-width: 768px) {
+		.intro-card {
+			padding: 1.5rem;
+		}
+	}
 </style>
