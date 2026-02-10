@@ -2,7 +2,7 @@ We'll guide you every step of the way on your journey to building your very own 
 
 After hosting workshops like [Boba Drops](https://boba.hackclub.com), [Fusering](https://fusering.hackclub.com), and [Swirl](https://swirl.hackclub.com), what would you like to lead next?
 
-Start by reading through the documentation available in the [Overview](/overview) section of this website. It's designed to help familiarize you with the process and increase your chances of hosting a successful workshop. Once you have a solid idea of what you’d like to create, [apply](/overview/apply) using the form!
+Start by reading through the advice availabe in the [overview](/overview) section, written by current YSWS organisers! They're designed to help you get familiar with the process, and help you to run a successful workshop! Once you have a clear idea of what you'd like to create, and what we're looking for, [apply](/overview/apply) using the form!
 
 Once approved, you'll create a guide and game plan, then lead the program at your own club! Hack Club will fund your initiative for up to $5 USD per hour per participant. If your workshop is successful, and you're interested in expanding it, we can help you scale it into a real Hack Club program for other clubs around the world to enjoy as well!
 
