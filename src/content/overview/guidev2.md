@@ -23,7 +23,7 @@ Here’s an example, using Fusering, of how you can give a tour of the UI at the
 
 ![alt](https://cdn.hackclub.com/019c4751-e7e0-7edc-acfa-f86f735f76bd/picture3.png) ![alt](https://cdn.hackclub.com/019c4751-e5df-7960-99e2-707b281a18f8/picture4.png)
 
-When explaining steps, use simple language where possible, if you need to use a technical term, consider explaining it the first time that you use it!
+When explaining steps, use simple language where possible! If you need to use a technical term, consider explaining it the first time that you use it!
 
 So now that we know how to create steps and explain the meaning behind them, let’s now take a look at slide design!
 
