@@ -1,12 +1,48 @@
 ---
 const today = new Date();
 import { REPOSITORY_URL } from '../consts';
+
+// Fetch latest commit info from GitHub API at build time
+let commitHash = '';
+let commitMessage = '';
+let commitDate = '';
+let commitUrl = '';
+
+try {
+	const res = await fetch('https://api.github.com/repos/bluelightning26/cat-boogie/commits?per_page=1');
+	if (res.ok) {
+		const [latest] = await res.json();
+		commitHash = latest.sha.slice(0, 7);
+		commitMessage = latest.commit.message.split('\n')[0]; // first line only
+		commitDate = new Date(latest.commit.committer.date).toLocaleDateString('en-US', {
+			year: 'numeric',
+			month: 'short',
+			day: 'numeric',
+		});
+		commitUrl = latest.html_url;
+	}
+} catch (e) {
+	// silently fail — commit tracker just won't render
+}
 ---
 
 <footer>
-	<p>Created with ♥ by <a href="https://github.com/bluelightning26" target="_blank">Dhyan</a> @ <a href="https://hackclub.com">Hack Club</a></p>
+	<p>Created with ♥ by <a href="https://github.com/bluelightning26" target="_blank">Dhyan</a> and <a href="https://github.com/ScapularSteam" target="_blank">David</a> @ <a href="https://hackclub.com">Hack Club</a></p>
 	<p class="credits"><a href="/overview/credits">Credits</a></p>
 	&copy; {today.getFullYear()} Hack Club. 501(c)(3) nonprofit (EIN: 81-2908499)
+	{commitHash && (
+		<div class="commit-tracker">
+			<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" style="vertical-align: -2px;">
+				<path fill="currentColor" d="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.25a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"/>
+			</svg>
+			<a href={commitUrl} target="_blank" title={commitMessage}>
+				<code>{commitHash}</code>
+			</a>
+			<span class="commit-msg">{commitMessage}</span>
+			<span class="commit-date">{commitDate}</span>
+		</div>
+	)}
+
 	<div class="social-links">
 		<a href={REPOSITORY_URL} target="_blank">
 			<span class="sr-only">Go to Astro's GitHub repo</span>
@@ -52,5 +88,43 @@ import { REPOSITORY_URL } from '../consts';
 	}
 	.social-links a:hover {
 		color: rgb(var(--gray-dark));
+	}
+	.commit-tracker {
+		margin-top: 1em;
+		font-size: 0.85em;
+		color: rgb(var(--gray));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5em;
+		flex-wrap: wrap;
+	}
+	.commit-tracker code {
+		background: rgba(0, 0, 0, 0.08);
+		padding: 0.15em 0.4em;
+		border-radius: 4px;
+		font-size: 0.9em;
+		font-family: monospace;
+	}
+	.commit-tracker a {
+		color: rgb(var(--gray-dark));
+		text-decoration: none;
+	}
+	.commit-tracker a:hover {
+		text-decoration: underline;
+		color: var(--accent);
+	}
+	.commit-msg {
+		max-width: 250px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.commit-date {
+		opacity: 0.7;
+	}
+	.commit-date::before {
+		content: '·';
+		margin-right: 0.3em;
 	}
 </style>
